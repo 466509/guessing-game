@@ -2,18 +2,26 @@
 
 using namespace std;
 
+// Jinyao Zhu, Guessing Game
+/* The computer will pick a random number 0-100 inclusive. The user will guess. and the computer will tell you if it's too high or too low.
+	Once correctly guessed, it will display how many guesses it took and ask if you want to play again.
+
+	1. No global variables
+    2. No strings
+    3. Include <iostream>
+
+*/
+
 int main()
 {
-  int input = 0;
   srand(time(NULL));
   int num_of_guesses = 0;
   char play = 'y';
   while (play=='y') {
     int rand_num = rand()%101;
-    cout << "Random number:" << rand_num << endl;
-    int guess;
     cout << "Enter your guess: ";
-    cin >> guess;
+    int guess;
+	cin >> guess;
     while (guess != rand_num) {
       if (guess > rand_num) {
         cout << "Guess too high!" << endl;
