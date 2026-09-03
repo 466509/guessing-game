@@ -23,21 +23,19 @@ int main()
     int guess;
 	cin >> guess;
     while (guess != rand_num) {
+		cout << "Enter your guess: ";
+		cin >> guess;
+		num_of_guesses++;
       if (guess > rand_num) {
         cout << "Guess too high!" << endl;
-	num_of_guesses++;
-	cout << "Enter your guess:";
-	cin >> guess;
       }
-      else {
+      if (guess < rand_num) {
         cout << "Guess too low!" << endl;
-	num_of_guesses++;
-	cout << "Enter your guess:";
-	cin >> guess;
       }
     }
-    cout << "Good job. Play again? (y/n) ";
-    cin << play;
+    cout << "Good job! It took " << num_of_guesses << " guesses" << endl;
+	cout << "Play again? (y/n) ";
+    cin >> play;
   }
   return 0;
 }
