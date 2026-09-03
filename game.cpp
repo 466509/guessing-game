@@ -19,9 +19,7 @@ int main()
   while (play=='y') {
 	int num_of_guesses = 0;
     int rand_num = rand()%101;
-    cout << "Enter your guess: ";
     int guess;
-	cin >> guess;
     while (guess != rand_num) {
 		cout << "Enter your guess: ";
 		cin >> guess;
