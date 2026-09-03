@@ -15,9 +15,9 @@ using namespace std;
 int main()
 {
   srand(time(NULL));
-  int num_of_guesses = 0;
   char play = 'y';
   while (play=='y') {
+	int num_of_guesses = 0;
     int rand_num = rand()%101;
     cout << "Enter your guess: ";
     int guess;
